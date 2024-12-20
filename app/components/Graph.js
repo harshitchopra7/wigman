@@ -10,6 +10,7 @@ import {
   BarElement,
   Tooltip,
   BarController,
+  LineController,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
