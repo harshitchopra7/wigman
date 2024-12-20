@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wingman Coding Challenge
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Demo](#demo)
+4. [Getting Started](#getting-started)
+5. [Code Structure](#code-structure)
+6. [Technologies Used](#technologies-used)
+7. [Testing and Quality Assurance](#testing-and-quality-assurance)
+8. [Contact](#contact)
+
+---
+
+## Project Overview
+
+This repository is my submission for the Wingman Coding Challenge for the Frontend Engineering Role. The goal was to create a pixel-perfect, responsive implementation of the provided Figma design using modern technologies, adhering to best practices in code quality and structure.
+
+The app simulates a live shopping assistance platform, showcasing my ability to build scalable, user-friendly frontend interfaces.
+
+---
+
+## Features
+
+- **Pixel-Perfect Design**: Faithfully reproduced the Figma design with exact spacing, colors, and layout.
+- **Responsive UI**: Ensures seamless experience across desktop, tablet, and mobile devices.
+- **Mock API Data**: Used mock data closely mimicking real-world API responses to populate the UI.
+- **Tailwind CSS Styling**: Implemented efficient and scalable styling.
+- **Sorting**: Interactive table sorting for better usability.
+- **Pagination**: Efficiently handles large datasets with server-like pagination.
+
+### Bonus Features
+
+- Sorting by multiple table columns.
+- Pagination integrated with mock data to simulate real-world scenarios.
+
+---
+
+## Demo
+
+- **Live Demo**: [Deployed Application](https://wingman-g4e2.vercel.app/)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Follow the steps below to run the project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Ensure you have Node.js (version 16 or above) installed.
+- Install a package manager like npm or Yarn.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Steps
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone the Repository**
 
-## Learn More
+   ```bash
+   git clone https://github.com/your-repo-link.git
+   cd your-repo-link
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install Dependencies**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Run the Development Server**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Build for Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run build
+   npm start
+
+---
+
+### Code Structure
+
+pages/
+├── api/             # API routes for server-side functionality
+├── index.js         # Landing page
+├── other-pages.js   # Additional pages (if any)
+components/
+├── Header.js        # Header component
+├── Table.js         # Table component with sorting & pagination
+├── Chatbot.js       # Chatbot UI component
+data/
+├── mockData.js      # Mock data simulating API responses
+styles/
+├── globals.css      # Global styles
+├── tailwind.css     # Tailwind setup
+utils/
+├── pagination.js    # Helper functions for pagination logic
+├── sorting.js       # Helper functions for sorting logic
+
+---
+
+### Technologies Used
+
+- Next.js: Framework for server-side rendering and static site generation.
+- React: Core library for building user interfaces.
+- Tailwind CSS: Utility-first CSS framework for efficient styling.
+- JavaScript: Programming language used for the logic and interactivity.
+- Vercel: Deployment platform for modern web applications.
+
+---
+
+### Manual Testing
+
+- Verified design accuracy by cross-referencing the Figma file.
+- Tested responsiveness on multiple devices (desktop, tablet, mobile).
+- Ensured sorting and pagination functionality worked seamlessly.
+
+---
+
+### Code Quality
+
+- Followed industry best practices for file organization and naming conventions.
+- Ensured modularity for scalability and reusability of components.
+
+---
+
+### Contact
+
+- Email: chopraharshit0909@gmail.com
+- LinkedIn: https://www.linkedin.com/in/harshit-chopra7/
