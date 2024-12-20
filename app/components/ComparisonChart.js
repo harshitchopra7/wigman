@@ -20,7 +20,8 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  LineController
 );
 
 export default function ComparisonChart() {
