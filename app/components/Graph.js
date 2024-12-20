@@ -134,7 +134,7 @@ const Graph = () => {
         <p className="text-xs font-semibold text-gray-500">CONSULTATIONS</p>
       </div>
 
-      <div className="relative h-96">
+      <div className="relative h-80">
         <Bar data={data} options={options} />
       </div>
 

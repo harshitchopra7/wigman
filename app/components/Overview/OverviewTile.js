@@ -11,7 +11,7 @@ const PERCENT_TYPE = {
 
 function OverviewTile({ overview }) {
   return (
-    <div className="rounded-2xl shadow-[0px_5px_22px_0px_#0000000A,0px_0px_0px_1px_#0000000F] w-[32%] p-5 md-w-[50%]">
+    <div className="rounded-2xl shadow-[0px_5px_22px_0px_#0000000A,0px_0px_0px_1px_#0000000F] w-full sm:w-[32%] p-5">
       <div className="flex items-center gap-2.5">
         {overview.icon}
         <p className="text-xs font-semibold text-[#667085]">

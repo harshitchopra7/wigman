@@ -9,7 +9,7 @@ import SettingsIcon from "../assets/sidebar/SettingsIcon";
 
 function SideBar() {
   return (
-    <div className="bg-[#115E56] flex flex-col justify-between items-center p-4 fixed h-full">
+    <div className="bg-[#115E56] flex flex-col justify-between items-center p-4 fixed h-full sm:block hidden">
       <div className="flex flex-col justify-between items-center">
         <Logo />
 

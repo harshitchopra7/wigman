@@ -501,99 +501,140 @@ export default function Orders() {
       <p className="text-3xl font-medium">Orders</p>
 
       <div className="my-10">
-        <table className="w-full border-collapse text-left font-sans border border-gray-300">
-          <thead>
-            <tr className="border-b border-gray-300 bg-gray-50 py-2.5">
-              {headers.map((header, index) => (
-                <th
-                  key={index}
-                  className="p-2.5 text-sm font-normal text-gray-600"
-                  onClick={
-                    header === "Order Value"
-                      ? handleSortOrderValue
-                      : header === "Commission"
-                      ? handleSortCommission
-                      : header === "Time spent"
-                      ? handleSortTimeSpent
-                      : header === "Date"
-                      ? handleSortDate
-                      : null
-                  }
-                >
-                  {header}
-                  {(header === "Order Value" ||
-                    header === "Commission" ||
-                    header === "Time spent" ||
-                    header === "Date") && (
-                    <span className="ml-1 cursor-pointer">
-                      {header === "Order Value"
-                        ? orderSortOrder === "asc"
-                          ? "↑"
-                          : "↓"
+        <div className="hidden sm:block">
+          <table className="w-full border-collapse text-left font-sans border border-gray-300">
+            <thead>
+              <tr className="border-b border-gray-300 bg-gray-50 py-2.5">
+                {headers.map((header, index) => (
+                  <th
+                    key={index}
+                    className="p-2.5 text-sm font-normal text-gray-600"
+                    onClick={
+                      header === "Order Value"
+                        ? handleSortOrderValue
                         : header === "Commission"
-                        ? commissionSortOrder === "asc"
-                          ? "↑"
-                          : "↓"
+                        ? handleSortCommission
                         : header === "Time spent"
-                        ? timeSpentSortOrder === "asc"
+                        ? handleSortTimeSpent
+                        : header === "Date"
+                        ? handleSortDate
+                        : null
+                    }
+                  >
+                    {header}
+                    {(header === "Order Value" ||
+                      header === "Commission" ||
+                      header === "Time spent" ||
+                      header === "Date") && (
+                      <span className="ml-1 cursor-pointer">
+                        {header === "Order Value"
+                          ? orderSortOrder === "asc"
+                            ? "↑"
+                            : "↓"
+                          : header === "Commission"
+                          ? commissionSortOrder === "asc"
+                            ? "↑"
+                            : "↓"
+                          : header === "Time spent"
+                          ? timeSpentSortOrder === "asc"
+                            ? "↑"
+                            : "↓"
+                          : dateSortOrder === "asc"
                           ? "↑"
-                          : "↓"
-                        : dateSortOrder === "asc"
-                        ? "↑"
-                        : "↓"}
-                    </span>
-                  )}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {paginate(sortedProducts, currentPage, itemsPerPage).map(
-              (product, rowIndex) => (
-                <tr key={rowIndex} className="h-20">
-                  <td className="p-2.5 flex items-center gap-3">
-                    <Image
-                      src={product.productImage}
-                      alt=""
-                      className="w-10 h-auto"
-                    />
-                    <p>{truncateText(product.productName, 12)}</p>
-                  </td>
-                  <td className="p-2.5">
-                    <p>{product.dateAndTime.date}</p>
-                    <p className="text-xs">{product.dateAndTime.time}</p>
-                  </td>
-                  <td className="p-2.5">{product.timeSpent}</td>
-                  <td className="p-2.5">{product.orderValue}</td>
-                  <td className="p-2.5 font-bold">{product.commission}</td>
-                  <td className="p-2.5 flex items-center gap-2 cursor-pointer">
-                    <p className="text-xs text-gray-400">View Chat</p>
-                    <ArrowUpRightIcon />
-                  </td>
-                </tr>
-              )
-            )}
-          </tbody>
-        </table>
+                          : "↓"}
+                      </span>
+                    )}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {paginate(sortedProducts, currentPage, itemsPerPage).map(
+                (product, rowIndex) => (
+                  <tr key={rowIndex} className="h-20">
+                    <td className="p-2.5 flex items-center gap-3">
+                      <Image
+                        src={product.productImage}
+                        alt=""
+                        className="w-10 h-auto"
+                      />
+                      <p>{truncateText(product.productName, 12)}</p>
+                    </td>
+                    <td className="p-2.5">
+                      <p>{product.dateAndTime.date}</p>
+                      <p className="text-xs">{product.dateAndTime.time}</p>
+                    </td>
+                    <td className="p-2.5">{product.timeSpent}</td>
+                    <td className="p-2.5">{product.orderValue}</td>
+                    <td className="p-2.5 font-bold">{product.commission}</td>
+                    <td className="p-2.5 flex items-center gap-2 cursor-pointer">
+                      <p className="text-xs text-gray-400">View Chat</p>
+                      <ArrowUpRightIcon />
+                    </td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
 
-        <div className="flex justify-between items-center mt-4">
-          <button
-            onClick={() => setCurrentPage(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-200 text-gray-600 rounded disabled:bg-gray-300"
-          >
-            Prev
-          </button>
-          <span>
-            Page {currentPage} of {totalPages}
-          </span>
-          <button
-            onClick={() => setCurrentPage(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-gray-200 text-gray-600 rounded disabled:bg-gray-300 bg-[#115E56]"
-          >
-            Next
-          </button>
+          <div className="flex justify-between items-center mt-4">
+            <button
+              onClick={() => setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-4 py-2 bg-gray-200 text-gray-600 rounded disabled:bg-gray-300"
+            >
+              Prev
+            </button>
+            <span>
+              Page {currentPage} of {totalPages}
+            </span>
+            <button
+              onClick={() => setCurrentPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 bg-gray-200 text-gray-600 rounded disabled:bg-gray-300 bg-[#115E56]"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+
+        <div className="block sm:hidden mt-5">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="border border-gray-300 p-4 rounded-md mb-4"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <Image
+                  src={product.productImage}
+                  alt=""
+                  className="w-10 h-auto"
+                />
+                <p>{truncateText(product.productName, 12)}</p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <strong>Date:</strong> {product.dateAndTime.date}
+                </div>
+                <div>
+                  <strong>Time:</strong> {product.dateAndTime.time}
+                </div>
+                <div>
+                  <strong>Time Spent:</strong> {product.timeSpent}
+                </div>
+                <div>
+                  <strong>Order Value:</strong> {product.orderValue}
+                </div>
+                <div>
+                  <strong>Commission:</strong> {product.commission}
+                </div>
+                <div className="flex items-center gap-2 mt-3">
+                  <p className="text-xs text-gray-400">View Chat</p>
+                  <ArrowUpRightIcon />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

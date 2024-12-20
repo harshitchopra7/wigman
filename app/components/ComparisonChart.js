@@ -83,12 +83,12 @@ export default function ComparisonChart() {
 
   return (
     <div className="w-full max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow-lg">
-      <div className="py-2.5 flex items-center gap-2.5">
+      <div className="py-2.5 pb-6 flex items-center gap-2.5">
         <ChartBar />
         <p className="text-xs font-semibold text-gray-500">VS PAST PERIOD</p>
       </div>
 
-      <div className="h-96">
+      <div className="h-80">
         <Bar data={data} options={options} />
       </div>
 

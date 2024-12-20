@@ -11,6 +11,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        lg2: "1291px",
+      },
     },
   },
   plugins: [],

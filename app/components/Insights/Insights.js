@@ -10,7 +10,7 @@ function Insights() {
     <div>
       <p className="text-3xl font-medium">Insights</p>
 
-      <div className="my-10 flex items-center gap-5">
+      <div className="my-10 flex flex-col xl:flex-row items-center gap-5">
         <Graph />
         <ComparisonChart />
         <Forecasts />

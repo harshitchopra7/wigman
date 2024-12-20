@@ -62,7 +62,6 @@ const overviewData = [
     type: "increase",
   },
 ];
-
 function Overview() {
   return (
     <div>
@@ -76,7 +75,7 @@ function Overview() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between flex-wrap gap-5 my-10">
+      <div className="flex items-center lg:justify-between flex-wrap gap-5 my-10 sm:justify-evenly md:justify-between">
         {overviewData.map((overview, key) => (
           <OverviewTile key={key} overview={overview} />
         ))}
@@ -84,5 +83,4 @@ function Overview() {
     </div>
   );
 }
-
 export default Overview;
