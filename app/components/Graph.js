@@ -21,6 +21,7 @@ ChartJS.register(
   PointElement,
   LineElement,
   BarElement,
+  LineElement,
   Tooltip
 );
 
