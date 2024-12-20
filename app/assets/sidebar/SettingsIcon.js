@@ -1,6 +1,6 @@
 import React from "react";
 
-function SettingsIcon({ width = "22px", height = "22px" }) {
+function SettingsIcon({ width = 36, height = 36 }) {
   return (
     <svg
       width={width}

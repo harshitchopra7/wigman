@@ -2,8 +2,12 @@ import React from "react";
 
 // icons
 import CaretDown from "../../assets/CaretDown";
-import ChatIcon from "@/app/assets/sidebar/ChatIcon";
+import ChatIcon from "@/app/assets/overview/ChatIcon";
 import TagIcon from "@/app/assets/navbar/TagIcon";
+import CheckIcon from "@/app/assets/overview/CheckIcon";
+import CoinsIcon from "@/app/assets/overview/CoinsIcon";
+import CoinIcon from "@/app/assets/overview/CoinIcon";
+import PiggyBankIcon from "@/app/assets/overview/PiggyBankIcon";
 
 // internal components
 import OverviewTile from "./OverviewTile";
@@ -19,7 +23,7 @@ const overviewData = [
   },
   {
     id: 2,
-    icon: <TagIcon />,
+    icon: <TagIcon height={14} width={14} />,
     title: "Orders Placed",
     count: "12",
     percent: "15",
@@ -27,7 +31,7 @@ const overviewData = [
   },
   {
     id: 3,
-    icon: <ChatIcon />,
+    icon: <CheckIcon />,
     title: "Conversion",
     count: "50",
     percent: "15",
@@ -35,7 +39,7 @@ const overviewData = [
   },
   {
     id: 4,
-    icon: <ChatIcon />,
+    icon: <CoinsIcon />,
     title: "Total Sales Value",
     count: "$2,400",
     percent: "15",
@@ -43,7 +47,7 @@ const overviewData = [
   },
   {
     id: 5,
-    icon: <ChatIcon />,
+    icon: <CoinIcon />,
     title: "AVG Order Value",
     count: "$240",
     percent: "15",
@@ -51,7 +55,7 @@ const overviewData = [
   },
   {
     id: 6,
-    icon: <ChatIcon />,
+    icon: <PiggyBankIcon />,
     title: "Comission Paid",
     count: "$240",
     percent: "15",
@@ -63,7 +67,7 @@ function Overview() {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <p className="text-3;pxl font-medium">At a glance</p>
+        <p className="text-3xl font-medium">At a glance</p>
         <div className="border border-[#DCDFE4] shadow-[0px_1px_2px_0px_#00000014] flex items-center justify-between w-fit rounded-md p-2.5">
           7 days
           <div className="ml-1 cursor-pointer">

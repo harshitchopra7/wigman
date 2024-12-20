@@ -32,7 +32,7 @@ function Logo({ width = "33.2px", height = "33.2px" }) {
           height="32.8"
           rx="5"
           stroke="url(#paint2_linear_2233_341)"
-          stroke-width="0.4"
+          strokeWidth="0.4"
         />
         <path
           d="M15.5704 27.7476C14.2111 28.0352 12.4927 26.7086 13.6512 25.9416C14.7367 25.2229 17.0353 25.3271 17.9669 24.4358C22.3336 20.3607 11.1129 24.164 19.9798 17.7588C20.5901 17.3179 21.2167 16.8794 21.7036 16.3051C24.8439 12.6011 14.6722 18.1371 19.4482 12.6175C27.4931 -0.0888319 14.6636 10.2252 13.0905 18.0306C10.3416 42.3623 5.65556 12.6862 18.9836 5.74535C21.3578 4.62523 24.2636 3.98524 24.0283 7.8813C23.783 10.9419 21.8636 11.3452 23.7514 13.881C25.0636 16.1452 21.8185 18.8365 20.5178 20.7054C23.3704 24.263 19.306 26.957 15.5704 27.7476Z"
@@ -47,9 +47,9 @@ function Logo({ width = "33.2px", height = "33.2px" }) {
           width="33.2"
           height="36.8"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -83,8 +83,8 @@ function Logo({ width = "33.2px", height = "33.2px" }) {
           y2="34.2"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" stop-opacity="0.81" />
-          <stop offset="1" stop-color="white" />
+          <stop stopColor="white" stopOpacity="0.81" />
+          <stop offset="1" stopColor="white" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_2233_341"
@@ -94,8 +94,8 @@ function Logo({ width = "33.2px", height = "33.2px" }) {
           y2="34.2"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3FDCCD" stop-opacity="0.81" />
-          <stop offset="1" stop-color="#09544D" />
+          <stop stopColor="#3FDCCD" stopOpacity="0.81" />
+          <stop offset="1" stopColor="#09544D" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_2233_341"
@@ -105,8 +105,8 @@ function Logo({ width = "33.2px", height = "33.2px" }) {
           y2="33.2"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#33F7E4" />
-          <stop offset="1" stop-color="#051D1B" stop-opacity="0" />
+          <stop stopColor="#33F7E4" />
+          <stop offset="1" stopColor="#051D1B" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

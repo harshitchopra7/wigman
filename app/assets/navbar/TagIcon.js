@@ -1,6 +1,6 @@
 import React from "react";
 
-function TagIcon({ height = "20px", width = "20px" }) {
+function TagIcon({ height = 20, width = 20 }) {
   return (
     <svg
       width={width}

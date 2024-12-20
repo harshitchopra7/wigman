@@ -1,11 +1,20 @@
 import React from "react";
 
+// internal components
+import Graph from "../Graph";
+import ComparisonChart from "../ComparisonChart";
+import Forecasts from "../Forecasts";
+
 function Insights() {
   return (
     <div>
       <p className="text-3xl font-medium">Insights</p>
 
-      <div className="my-10"></div>
+      <div className="my-10 flex items-center gap-5">
+        <Graph />
+        <ComparisonChart />
+        <Forecasts />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CaretDown({ height = "16px", width = "16px" }) {
+function CaretDown({ height = 16, width = 16 }) {
   return (
     <svg
       width={width}

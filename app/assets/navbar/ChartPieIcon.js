@@ -1,6 +1,6 @@
 import React from "react";
 
-function ChartPieIcon({ height = "20px", width = "20px" }) {
+function ChartPieIcon({ height = 20, width = 20 }) {
   return (
     <svg
       width={width}

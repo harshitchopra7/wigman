@@ -1,6 +1,6 @@
 import React from "react";
 
-function ChatIcon({ width = "22px", height = "22px" }) {
+function ChatIcon({ width = 36, height = 36 }) {
   return (
     <svg
       width={width}
