@@ -57,8 +57,8 @@ Follow the steps below to run the project locally:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-repo-link.git
-   cd your-repo-link
+   git clone https://github.com/harshitchopra7/wingman
+   cd wingman
 
 2. **Install Dependencies**
 
@@ -75,27 +75,6 @@ Follow the steps below to run the project locally:
    ```bash
    npm run build
    npm start
-
----
-
-### Code Structure
-
-pages/
-├── api/             # API routes for server-side functionality
-├── index.js         # Landing page
-├── other-pages.js   # Additional pages (if any)
-components/
-├── Header.js        # Header component
-├── Table.js         # Table component with sorting & pagination
-├── Chatbot.js       # Chatbot UI component
-data/
-├── mockData.js      # Mock data simulating API responses
-styles/
-├── globals.css      # Global styles
-├── tailwind.css     # Tailwind setup
-utils/
-├── pagination.js    # Helper functions for pagination logic
-├── sorting.js       # Helper functions for sorting logic
 
 ---
 
